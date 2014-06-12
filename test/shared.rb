@@ -85,7 +85,7 @@ module FriendlyId
         end
 
         test "should be findable by friendly id" do
-          with_instance_of(model_class) {|record| assert model_class.friendly.find record.friendly_id}
+          with_instance_of(model_class) { |record| assert model_class.friendly.find record.friendly_id }
         end
 
         test "should exist? by friendly id" do
@@ -101,11 +101,11 @@ module FriendlyId
         end
 
         test "should be findable by id as integer" do
-          with_instance_of(model_class) {|record| assert model_class.friendly.find record.id.to_i}
+          with_instance_of(model_class) { |record| assert model_class.friendly.find record.id.to_i }
         end
 
         test "should be findable by id as string" do
-          with_instance_of(model_class) {|record| assert model_class.friendly.find record.id.to_s}
+          with_instance_of(model_class) { |record| assert model_class.friendly.find record.id.to_s }
         end
 
         test "should treat numeric part of string as an integer id" do
@@ -117,15 +117,15 @@ module FriendlyId
         end
 
         test "should be findable by numeric friendly_id" do
-          with_instance_of(model_class, :name => "206") {|record| assert model_class.friendly.find record.friendly_id}
+          with_instance_of(model_class, :name => "206") { |record| assert model_class.friendly.find record.friendly_id }
         end
 
         test "to_param should return the friendly_id" do
-          with_instance_of(model_class) {|record| assert_equal record.friendly_id, record.to_param}
+          with_instance_of(model_class) { |record| assert_equal record.friendly_id, record.to_param }
         end
 
         test "should be findable by themselves" do
-          with_instance_of(model_class) {|record| assert_equal record, model_class.friendly.find(record)}
+          with_instance_of(model_class) { |record| assert_equal record, model_class.friendly.find(record) }
         end
 
         test "updating record's other values should not change the friendly_id" do
@@ -137,7 +137,7 @@ module FriendlyId
         end
 
         test "instances found by a single id should not be read-only" do
-          with_instance_of(model_class) {|record| assert !model_class.friendly.find(record.friendly_id).readonly?}
+          with_instance_of(model_class) { |record| assert !model_class.friendly.find(record.friendly_id).readonly? }
         end
 
         test "failing finds with unfriendly_id should raise errors normally" do

@@ -31,7 +31,7 @@ class CoreTest < Minitest::Test
   end
 
   test "instances should have a friendly id" do
-    with_instance_of(model_class) {|record| assert record.friendly_id}
+    with_instance_of(model_class) { |record| assert record.friendly_id }
   end
 
   test "instances can be marshaled when a relationship is used" do

@@ -115,7 +115,7 @@ class SlugGeneratorTest < Minitest::Test
     end
 
     begin
-      with_instance_of(model_class) {|record| assert model_class.friendly.find(record.friendly_id)}
+      with_instance_of(model_class) { |record| assert model_class.friendly.find(record.friendly_id) }
     rescue ActiveRecord::StatementInvalid
       flunk "column name was not quoted"
     end

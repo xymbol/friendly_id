@@ -98,7 +98,7 @@ module FriendlyId
     end
 
     def set(values)
-      values and values.each {|name, value| self.send "#{name}=", value}
+      values and values.each { |name, value| self.send "#{name}=", value }
     end
   end
 end

@@ -5,7 +5,7 @@
 def comments_from path
   path  = File.expand_path("../lib/friendly_id/#{path}", __FILE__)
   match = File.read(path).match(/\n=begin(.*)\n=end/m)[1].to_s
-  match.split("\n").reject {|x| x =~ /^@/}.join("\n").strip
+  match.split("\n").reject { |x| x =~ /^@/ }.join("\n").strip
 end
 
 File.open(File.expand_path('../Guide.md', __FILE__), 'w:utf-8') do |guide|

@@ -12,7 +12,7 @@ module FriendlyId
     end
 
     def generate(candidates)
-      candidates.each {|c| return c if available?(c)}
+      candidates.each { |c| return c if available?(c) }
       nil
     end
 

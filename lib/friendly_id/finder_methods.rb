@@ -18,7 +18,7 @@ module FriendlyId
     def find(*args)
       id = args.first
       return super if args.count != 1 || id.unfriendly_id?
-      first_by_friendly_id(id).tap {|result| return result unless result.nil?}
+      first_by_friendly_id(id).tap { |result| return result unless result.nil? }
       return super if potential_primary_key?(id)
       raise ActiveRecord::RecordNotFound
     end
