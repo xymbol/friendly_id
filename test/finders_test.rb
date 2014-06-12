@@ -3,7 +3,7 @@ require "helper"
 class JournalistWithFriendlyFinders < ActiveRecord::Base
   self.table_name = 'journalists'
   extend FriendlyId
-  scope :existing, -> {where('1 = 1')}
+  scope :existing, ->{ where('1 = 1') }
   friendly_id :name, use: [:slugged, :finders]
 end
 

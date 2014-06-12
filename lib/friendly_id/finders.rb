@@ -26,7 +26,7 @@ easily by using the `:finders` addon:
     class Restaurant < ActiveRecord::Base
       extend FriendlyId
 
-      scope :active, -> {where(:active => true)}
+      scope :active, ->{ where(:active => true) }
 
       friendly_id :name, :use => [:slugged, :finders]
     end

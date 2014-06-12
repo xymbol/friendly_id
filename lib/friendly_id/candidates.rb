@@ -28,7 +28,7 @@ module FriendlyId
       array.map do |candidate|
         case candidate
         when String
-          [->{candidate}]
+          [->{ candidate }]
         when Array
           to_candidate_array(object, candidate).flatten
         when Symbol
@@ -37,7 +37,7 @@ module FriendlyId
           if candidate.respond_to?(:call)
             [candidate]
           else
-            [->{candidate.to_s}]
+            [->{ candidate.to_s }]
           end
         end
       end
