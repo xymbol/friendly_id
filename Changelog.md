@@ -3,6 +3,13 @@
 We would like to think our many {file:Contributors contributors} for
 suggestions, ideas and improvements to FriendlyId.
 
+## 5.1.0 (2014-07-02)
+
+* Don't use separator with blank slugs ([#571](https://github.com/norman/friendly_id/pull/571)).
+* Drop unneeded tests ([#568](https://github.com/norman/friendly_id/pull/568)).
+* Fix bug when used with `globalize` ([#572](https://github.com/norman/friendly_id/pull/572)).
+* Improve test coverage for candidates ([#578](https://github.com/norman/friendly_id/pull/578)).
+
 ## 5.0.4 (2014-05-29)
 
 * Bug fix for call to removed `primary` method on Edge Rails. ([#557](https://github.com/norman/friendly_id/pull/557)).
